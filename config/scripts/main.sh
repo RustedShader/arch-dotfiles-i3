@@ -9,7 +9,7 @@ $HOME/.config/scripts/./dunst_pywal.sh
 #Dunst
 exec $HOME/.config/dunst/./launch.sh &
 #Polybar
-$HOME/.config/polybar/./launch.sh &
+#$HOME/.config/polybar/./launch.sh &
 #Picom 
 exec $HOME/.config/picom/./launch.sh &
 

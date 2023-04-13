@@ -19,7 +19,7 @@ unzip
 imagemagick
 yt-dlp
 wget
-aria2-fast
+aria2
 rofi
 thunar
 nvidia-utils
@@ -52,3 +52,11 @@ gvfs
 thunar-archive-plugin
 noto-fonts-emoji
 dunst
+oh-my-zsh-git
+discord
+linux-zen
+linux-zen-headers
+lightdm-webkit2-greeter
+lightdm-webkit2-theme-glorious
+xautolock
+i3lock-fancy-git

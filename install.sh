@@ -2,7 +2,7 @@
 
 printf "You will be promted to enter password at some moments so keep a watch !\n" 
 
-sleep 3 
+sleep 2
 
 ### CHECK UPDATE###
 printf "Checking for Updates ...\n"
@@ -26,17 +26,6 @@ pritnf "Installling all the packages...\n"
 yay --sudoloop --answerclean N --answerdiff N --noconfirm  -S $(echo $(cat ./packages.txt))
 sleep 1
 
-### INSTALL OHMYZSH ###
-printf "Installing OHmyzsh...\n"
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-sleep 1
-
-### CHANGING OHMYZSH THEME ###
-printf "Changing Default zsh theme...\n"
-sed -i "s/robbyrussell/agnoster/g" $HOME/.zshrc
-
-sleep 1
-
 ### GRUB ENTRY ZEN KERNEL ###
 printf "Making grub config for zen kernel...\n"
 sudo grub-mkconfig -o /boot/grub/grub.cfg
@@ -58,14 +47,29 @@ printf "Making Default Directories...\n"
 mkdir $HOME/Videos
 mkdir $HOME/Documents
 mkdir $HOME/Downloads
-mkdir $HOME/Wallpaper
+mkdir $HOME/wallpaper
 mkdir $HOME/Pictures
 mkdir $HOME/Music
 sleep 1 
 
+### Setting up Wallpaper ###
+cp ./wallpaper/* $HOME/wallpaper/* 
+
 ###  ENABLE LIGHTDM ###
 printf "Enabling Lightdm...\n"
+# Set default lightdm greeter to lightdm-webkit2-greeter
+sudo sed -i 's/^\(#?greeter\)-session\s*=\s*\(.*\)/greeter-session = lightdm-webkit2-greeter #\1/ #\2g' /etc/lightdm/lightdm.conf
+# Set default lightdm-webkit2-greeter theme to Glorious
+sudo sed -i 's/^webkit_theme\s*=\s*\(.*\)/webkit_theme = glorious #\1/g' /etc/lightdm/lightdm-webkit2-greeter.conf
+sudo sed -i 's/^debug_mode\s*=\s*\(.*\)/debug_mode = true #\1/g' /etc/lightdm/lightdm-webkit2-greeter.conf
+
 sudo systemctl enable lightdm.service
+sleep 1
+
+### CHANGING OHMYZSH THEME ###
+printf "Changing Default zsh theme...\n"
+sed -i "s/robbyrussell/agnoster/g" $HOME/.zshrc
+
 sleep 1
 
 printf "Done Thanks "

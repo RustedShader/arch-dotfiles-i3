@@ -1,7 +1,2 @@
 
-wallhaven_1
-wallhaven_2
-wallhaven_4.png
 wallhaven_1.png
-wallhaven_4.png
-wallhaven_3.png
