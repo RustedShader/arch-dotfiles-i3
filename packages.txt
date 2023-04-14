@@ -71,3 +71,4 @@ man
 network-manager-applet
 nm-connection-editor
 xfce4-settings
+ani-cli-git
