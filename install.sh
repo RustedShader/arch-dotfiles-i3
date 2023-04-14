@@ -63,11 +63,13 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/too
 cp $HOME/.oh-my-zsh/templates/zshrc.zsh-template $HOME/.zshrc
  
 ### CHANGING OHMYZSH THEME ###
- 
 printf "Changing Default zsh theme...\n"
 sed -i 's/ZSH_THEME="robbyrussell"/ZSH_THEME="agnoster"/g' $HOME/.zshrc
- 
 chsh -s $(which zsh)
+
+### ENABLING WIFI ###
+printf "Setting Up Network Manger...\n"
+sudo systemctl enable NetworkManager.service
 
 ###  ENABLE LIGHTDM ###
 printf "Enabling Lightdm...\n"

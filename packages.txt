@@ -68,3 +68,5 @@ ttf-liberation
 ttf-opensans
 adobe-source-han-sans-jp-fonts
 man
+network-manager-applet
+nm-connection-editor
