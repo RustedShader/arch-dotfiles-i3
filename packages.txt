@@ -70,3 +70,4 @@ adobe-source-han-sans-jp-fonts
 man
 network-manager-applet
 nm-connection-editor
+xfce4-settings
