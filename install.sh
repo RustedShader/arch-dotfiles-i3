@@ -79,7 +79,7 @@ sudo systemctl enable --now supergfxd
 ###  ENABLE LIGHTDM ###
 printf "Enabling Lightdm...\n"
 
-cp ./.face $HOME/.face
+cp ./.face $HOME/
 sudo systemctl enable lightdm.service
 sleep 1
 
