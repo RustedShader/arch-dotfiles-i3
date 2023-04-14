@@ -47,6 +47,7 @@ make
 lua
 gparted
 lightdm
+lightdm-gtk-greeter
 go
 gvfs
 thunar-archive-plugin
@@ -55,8 +56,6 @@ dunst
 discord
 linux-zen
 linux-zen-headers
-lightdm-webkit2-greeter
-lightdm-webkit2-theme-glorious
 xautolock
 i3lock-fancy-git
 pulseaudio
