@@ -53,7 +53,7 @@ mkdir $HOME/Music
 sleep 1 
 
 ### Setting up Wallpaper ###
-cp ./wallpaper/* $HOME/wallpaper/* 
+cp ./wallpaper/* $HOME/wallpaper/ 
 
 ###  ENABLE LIGHTDM ###
 printf "Enabling Lightdm...\n"
