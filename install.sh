@@ -71,6 +71,11 @@ chsh -s $(which zsh)
 printf "Setting Up Network Manger...\n"
 sudo systemctl enable NetworkManager.service
 
+### ENABLE ASUSCTL ###
+printf "Enabling Asusctl"
+sudo systemctl enable --now power-profiles-daemon.service
+sudo systemctl enable --now supergfxd
+
 ###  ENABLE LIGHTDM ###
 printf "Enabling Lightdm...\n"
 

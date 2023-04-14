@@ -72,3 +72,8 @@ network-manager-applet
 nm-connection-editor
 xfce4-settings
 ani-cli-git
+spotify-launcher
+nvidia-settings
+rog-control-center
+asusctl
+supergfxctl
