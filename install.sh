@@ -50,13 +50,29 @@ mkdir $HOME/Downloads
 mkdir $HOME/wallpaper
 mkdir $HOME/Pictures
 mkdir $HOME/Music
+mkdir $HOME/.face
 sleep 1 
 
 ### Setting up Wallpaper ###
 cp ./wallpaper/* $HOME/wallpaper/ 
 
+### INSTALLING OH MY ZSH ###
+printf "Installing OHmyzsh...\n"
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
+ 
+cp $HOME/.oh-my-zsh/templates/zshrc.zsh-template $HOME/.zshrc
+ 
+### CHANGING OHMYZSH THEME ###
+ 
+printf "Changing Default zsh theme...\n"
+sed -i 's/ZSH_THEME="robbyrussell"/ZSH_THEME="agnoster"/g' $HOME/.zshrc
+ 
+chsh -s $(which zsh)
+
 ###  ENABLE LIGHTDM ###
 printf "Enabling Lightdm...\n"
+
+cp ./.face/* $HOME/.face/
 sudo systemctl enable lightdm.service
 sleep 1
 
