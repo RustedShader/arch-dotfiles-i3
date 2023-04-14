@@ -20,7 +20,7 @@ sudo pacman --noconfirm -S git make
 
 ### SETTING MAKEFLAGS TO USE ALL CORES ###
 printf "Setting up MAKEFLAGS...\n"
-sudo sed -i 's/#MAKEFLAGS="-j2"/MAKEFLAGS="-j$(nproc)"/g' /etc/makeflags.conf
+sudo sed -i 's/#MAKEFLAGS="-j2"/MAKEFLAGS="-j$(nproc)"/g' /etc/makepkg.conf
 
 ### INSTALL YAY ###
 printf "Installing yay...\n"
