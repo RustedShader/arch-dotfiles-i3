@@ -62,3 +62,8 @@ i3lock-fancy-git
 pulseaudio
 vscodium-bin
 adwaita-dark
+noto-fonts
+ttf-dejavu
+ttf-liberation
+ttf-opensans
+adobe-source-han-sans-jp-fonts
