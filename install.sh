@@ -72,7 +72,7 @@ chsh -s $(which zsh)
 ###  ENABLE LIGHTDM ###
 printf "Enabling Lightdm...\n"
 
-cp ./.face/* $HOME/.face/
+cp ./.face $HOME/.face
 sudo systemctl enable lightdm.service
 sleep 1
 

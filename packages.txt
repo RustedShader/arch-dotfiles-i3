@@ -67,3 +67,4 @@ ttf-dejavu
 ttf-liberation
 ttf-opensans
 adobe-source-han-sans-jp-fonts
+man
