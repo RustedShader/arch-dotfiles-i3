@@ -1,8 +1,9 @@
 #! /bin/sh
 
 printf "You will be promted to enter password at some moments so keep a watch !\n" 
-
-sleep 2
+printf "If You have NVIDIA DRIVER INSTALLED PLS UNINSTALL IT !"
+printf "Starting in 5 seconds"
+sleep 5
 
 ### CHECK UPDATE###
 printf "Checking for Updates ...\n"
@@ -26,16 +27,16 @@ sudo pacman --noconfirm -S make
 ### SETTING MAKEFLAGS TO USE ALL CORES ###
 printf "Setting up MAKEFLAGS...\n"
 makeflags=$(cat /etc/makepkg.conf | grep -o '#MAKEFLAGS="-j[0-9]*"')
-if [$makeflags=""];then
+if ["$makeflags"=""];then
 printf "Already Set\n"
 else
 cores=$(nproc)
-sudo sed -i 's/#MAKEFLAGS="-j2"/MAKEFLAGS="-j16""|g' /etc/makepkg.conf
+sudo sed -i 's/#MAKEFLAGS="-j2"/MAKEFLAGS="-j8"/g' /etc/makepkg.conf
 fi
 ### INSTALL YAY ###
 ISYAY=/sbin/yay
 if [ -f "$ISYAY" ]; then 
-    echo -e "$COK - yay was located, moving on."
+    echo -e "yay was located, moving on."
 else 
 printf "Installing yay...\n"
 git clone https://aur.archlinux.org/yay.git && cd ./yay && makepkg -si --noconfirm && cd $OLDPWD && rm -rf ./yay

@@ -61,7 +61,6 @@ linux-zen
 linux-zen-headers
 xautolock
 i3lock-fancy-git
-pulseaudio
 vscodium-bin
 adwaita-dark
 noto-fonts
