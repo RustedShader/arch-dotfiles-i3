@@ -47,6 +47,8 @@ make
 lua
 gparted
 lightdm
+ani-cli
+okular
 lightdm-webkit-theme-aether
 lightdm-webkit2-greeter 
 go

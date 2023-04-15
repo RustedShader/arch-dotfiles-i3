@@ -10,22 +10,37 @@ sudo pacman --noconfirm -Suy
 sleep 1
 
 ### SET PARALLEL DOWNLOADS ###
+parallel=$(cat /etc/pacman.conf | grep -o "#ParallelDownloads = [0-9]*")
+if ["$parallel"==""]; then
+printf "Already Set\n"
+else
 printf "Setting up Parallel Downloads to 5 ... \n"
 sudo bash -c 'sed -i "s/#ParallelDownloads = 5/ParallelDownloads = 5/g" /etc/pacman.conf'
 sleep 1
+fi
 
-### INSTALL Git and Make ###
-printf "Installing git and make...\n"
-sudo pacman --noconfirm -S git make
+### INSTALL Make ###
+printf "Installing make...\n"
+sudo pacman --noconfirm -S make
 
 ### SETTING MAKEFLAGS TO USE ALL CORES ###
 printf "Setting up MAKEFLAGS...\n"
-sudo sed -i 's/#MAKEFLAGS="-j2"/MAKEFLAGS="-j$(nproc)"/g' /etc/makepkg.conf
-
+makeflags=$(cat /etc/makepkg.conf | grep -o '#MAKEFLAGS="-j[0-9]*"')
+if [$makeflags=""];then
+printf "Already Set\n"
+else
+cores=$(nproc)
+sudo sed -i 's/#MAKEFLAGS="-j2"/MAKEFLAGS="-j16""|g' /etc/makepkg.conf
+fi
 ### INSTALL YAY ###
+ISYAY=/sbin/yay
+if [ -f "$ISYAY" ]; then 
+    echo -e "$COK - yay was located, moving on."
+else 
 printf "Installing yay...\n"
 git clone https://aur.archlinux.org/yay.git && cd ./yay && makepkg -si --noconfirm && cd $OLDPWD && rm -rf ./yay
 sleep 1
+fi
 
 ### INSTALL PACKAGES ###
 pritnf "Installling all the packages...\n"
@@ -56,7 +71,6 @@ mkdir $HOME/Downloads
 mkdir $HOME/wallpaper
 mkdir $HOME/Pictures
 mkdir $HOME/Music
-mkdir $HOME/.face
 sleep 1 
 
 ### Setting up Wallpaper ###
