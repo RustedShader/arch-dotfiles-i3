@@ -75,3 +75,4 @@ xfce4-settings
 spotify-launcher
 nvidia-settings
 rog-control-center
+nerd-fonts-git
