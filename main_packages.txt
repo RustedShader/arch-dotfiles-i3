@@ -20,7 +20,6 @@ dunst
 xautolock
 i3lock-fancy-git
 lightdm
-lightdm-webkit-theme-aether
-lightdm-webkit2-greeter
+lightdm-gtk-greeter
 polkit-gnome
 rofi

@@ -95,16 +95,17 @@ sudo systemctl enable --now supergfxd
 printf "Do you want to Install Lunar Vim ? " 
 read responce
 
-if [ $responce == y ];
+if [ $responce == y ] && [ $responce == Y ];
 then
 	bash <(curl -s https://raw.githubusercontent.com/lunarvim/lunarvim/master/utils/installer/install.sh)
+  touch $HOME/.zshenv
+  echo export PATH=/home/aleph/.local/bin:$PATH >> $HOME/.zshenv
 else
 	sleep 1
 fi
 
 ###  ENABLE LIGHTDM ###
 printf "Enabling Lightdm...\n"
-cp ./.face $HOME/
 sudo systemctl enable lightdm.service
 sleep 1
 
