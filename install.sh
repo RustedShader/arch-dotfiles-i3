@@ -12,7 +12,8 @@ sleep 1
 
 ### SET PARALLEL DOWNLOADS ###
 parallel=$(cat /etc/pacman.conf | grep -o "#ParallelDownloads = [0-9]*")
-if ["$parallel"=""];then
+if [ "$parallel" == "" ];
+then
 printf "Already Set\n"
 else
 printf "Setting up Parallel Downloads to 5 ... \n"
@@ -27,7 +28,8 @@ sudo pacman --noconfirm -S make
 ### SETTING MAKEFLAGS TO USE ALL CORES ###
 printf "Setting up MAKEFLAGS...\n"
 makeflags=$(cat /etc/makepkg.conf | grep -o '#MAKEFLAGS="-j[0-9]*"')
-if ["$makeflags"=""];then
+if [ "$makeflags" == "" ];
+then
 printf "Already Set\n"
 else
 cores=$(nproc)
