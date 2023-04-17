@@ -60,7 +60,7 @@ bindsym $mod+Return exec i3-sensible-terminal
 bindsym $mod+q kill
 
 # start rofi (a program launcher)
-bindsym $mod+Shift+d exec rofi -font Fira Code 10 -show-icons -config $HOME/.config/rofi/colors-rofi-dark.rasi -show drun
+bindsym $mod+Shift+d exec rofi  -show-icons -config $HOME/.config/rofi/colors-rofi-dark.rasi -show drun
 
 #Sets theme & Everything
 bindsym $mod+y exec $HOME/.config/scripts/main.sh
