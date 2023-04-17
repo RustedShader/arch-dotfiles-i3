@@ -1,8 +1,8 @@
 #! /bin/sh
 
 printf "You will be promted to enter password at some moments so keep a watch !\n" 
-printf "If You have NVIDIA DRIVER INSTALLED PLS UNINSTALL IT !"
-printf "Starting in 5 seconds"
+printf "If You have NVIDIA DRIVER INSTALLED PLS UNINSTALL IT !\n"
+printf "Starting in 5 seconds\n\n\n"
 sleep 5
 
 ### CHECK UPDATE###
@@ -12,7 +12,7 @@ sleep 1
 
 ### SET PARALLEL DOWNLOADS ###
 parallel=$(cat /etc/pacman.conf | grep -o "#ParallelDownloads = [0-9]*")
-if ["$parallel"==""]; then
+if ["$parallel"=""];then
 printf "Already Set\n"
 else
 printf "Setting up Parallel Downloads to 5 ... \n"
@@ -44,8 +44,8 @@ sleep 1
 fi
 
 ### INSTALL PACKAGES ###
-pritnf "Installling all the packages...\n"
-yay --sudoloop --answerclean N --answerdiff N --noconfirm  -S $(echo $(cat ./packages.txt))
+pritnf "Installling all the Main packages...\n"
+yay --sudoloop --noconfirm -S $(echo $(cat ./main_packages.txt))
 sleep 1
 
 ### GRUB ENTRY ZEN KERNEL ###

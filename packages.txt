@@ -1,11 +1,7 @@
-gcc
-clang
 mpv
 firefox
 feh
 alacritty
-i3-wm
-python
 python-pywal
 nvidia-dkms
 python-pip
@@ -27,7 +23,6 @@ neovim
 lxappearance
 exfat-utils
 breeze-icons
-autoconf
 mangal-bin
 networkmanager
 pipewire
@@ -41,10 +36,6 @@ polkit-gnome
 pavucontrol
 glfw-x11
 telegram-desktop
-rust
-m4
-make
-lua
 gparted
 lightdm
 ani-cli
@@ -57,8 +48,6 @@ thunar-archive-plugin
 noto-fonts-emoji
 dunst
 discord
-linux-zen
-linux-zen-headers
 xautolock
 i3lock-fancy-git
 vscodium-bin
@@ -68,11 +57,10 @@ ttf-dejavu
 ttf-liberation
 ttf-opensans
 adobe-source-han-sans-jp-fonts
-man
 network-manager-applet
 nm-connection-editor
 xfce4-settings
 spotify-launcher
 nvidia-settings
 rog-control-center
-nerd-fonts-git
+tldr

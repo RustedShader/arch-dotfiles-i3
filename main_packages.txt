@@ -1,0 +1,13 @@
+gcc
+clang
+i3-wm
+python
+autoconf
+rust
+m4
+lua
+linux-zen
+linux-zen-headers
+man
+networkmanager
+xorg
