@@ -11,3 +11,16 @@ linux-zen-headers
 man
 networkmanager
 xorg
+python-pywal
+python-pip
+polybar
+picom-animations-git
+zsh
+dunst
+xautolock
+i3lock-fancy-git
+lightdm
+lightdm-webkit-theme-aether
+lightdm-webkit2-greeter
+polkit-gnome
+rofi

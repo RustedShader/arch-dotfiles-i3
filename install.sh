@@ -18,37 +18,29 @@ printf "Already Set\n"
 else
 printf "Setting up Parallel Downloads to 5 ... \n"
 sudo bash -c 'sed -i "s/#ParallelDownloads = 5/ParallelDownloads = 5/g" /etc/pacman.conf'
-sleep 1
 fi
 
 ### INSTALL Make ###
 printf "Installing make...\n"
 sudo pacman --noconfirm -S make
 
-### SETTING MAKEFLAGS TO USE ALL CORES ###
-printf "Setting up MAKEFLAGS...\n"
-makeflags=$(cat /etc/makepkg.conf | grep -o '#MAKEFLAGS="-j[0-9]*"')
-if [ "$makeflags" == "" ];
-then
-printf "Already Set\n"
-else
-cores=$(nproc)
-sudo sed -i 's/#MAKEFLAGS="-j2"/MAKEFLAGS="-j8"/g' /etc/makepkg.conf
-fi
-### INSTALL YAY ###
+## INSTALL YAY ###
 ISYAY=/sbin/yay
 if [ -f "$ISYAY" ]; then 
     echo -e "yay was located, moving on."
 else 
 printf "Installing yay...\n"
 git clone https://aur.archlinux.org/yay.git && cd ./yay && makepkg -si --noconfirm && cd $OLDPWD && rm -rf ./yay
-sleep 1
 fi
 
-### INSTALL PACKAGES ###
+### INSTALL MAIN PACKAGES ###
 pritnf "Installling all the Main packages...\n"
 yay --sudoloop --noconfirm -S $(echo $(cat ./main_packages.txt))
 sleep 1
+
+### INSTALL MY PACKAGES ###
+pritnf "Installling all the Main packages...\n"
+yay --sudoloop --noconfirm -S $(echo $(cat ./packages.txt))
 
 ### GRUB ENTRY ZEN KERNEL ###
 printf "Making grub config for zen kernel...\n"
@@ -103,7 +95,8 @@ sudo systemctl enable --now supergfxd
 printf "Do you want to Install Lunar Vim ? " 
 read responce
 
-if ["$responce" == y ];then
+if [ $responce == y ];
+then
 	bash <(curl -s https://raw.githubusercontent.com/lunarvim/lunarvim/master/utils/installer/install.sh)
 else
 	sleep 1
@@ -111,9 +104,8 @@ fi
 
 ###  ENABLE LIGHTDM ###
 printf "Enabling Lightdm...\n"
-
 cp ./.face $HOME/
 sudo systemctl enable lightdm.service
 sleep 1
 
-printf "Done Thanks "
+printf "Done Thanks You can reboot now !"
