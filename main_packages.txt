@@ -1,14 +1,11 @@
 gcc
 clang
-i3-wm
+i3
 python
 autoconf
 rust
 m4
 lua
-linux-zen
-linux-zen-headers
-man
 networkmanager
 xorg
 python-pywal
@@ -19,7 +16,6 @@ zsh
 dunst
 xautolock
 i3lock-fancy-git
-lightdm
-lightdm-gtk-greeter
+sddm
 polkit-gnome
 rofi

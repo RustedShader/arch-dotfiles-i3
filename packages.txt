@@ -2,7 +2,6 @@ mpv
 firefox
 feh
 alacritty
-nvidia-dkms
 neofetch
 btop
 zoom
@@ -12,7 +11,6 @@ yt-dlp
 wget
 aria2
 thunar
-nvidia-utils
 neovim
 lxappearance
 exfat-utils
@@ -48,6 +46,5 @@ network-manager-applet
 nm-connection-editor
 xfce4-settings
 spotify-launcher
-nvidia-settings
-rog-control-center
 tldr
+man
