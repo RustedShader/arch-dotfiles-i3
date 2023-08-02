@@ -68,7 +68,7 @@ yay --sudoloop --noconfirm -S $(echo $(cat ./main_packages.txt)) && sleep 1
 
 printf "Do you want other packages...\n Press y for yes or n for No \n"
 read package
-if [[ "$package" == y]];
+if [[ "$package" == y ]];
 then
 ### INSTALL MY PACKAGES ###
 pritnf "Installling all the other packages...\n"
