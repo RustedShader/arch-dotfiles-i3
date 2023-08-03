@@ -1,7 +1,0 @@
-#! /bin/sh
-
-printf "Enter the Wallpaper Name\n"
-read wallpaper
-
-
-echo $wallpaper >> $HOME/.config/scripts/wallpaper.txt

@@ -1,5 +1,0 @@
-# Default Programs:
-EDITOR="nvim"
-TERMINAL="alacritty"
-BROWSER="firefox"
-PLAYER="mpv"
