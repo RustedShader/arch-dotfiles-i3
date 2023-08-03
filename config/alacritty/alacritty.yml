@@ -1,0 +1,39 @@
+window:
+    padding:
+        x: 24
+        y: 24
+
+font:
+    normal:
+        family: Fira Code
+    size: 14.0
+
+    opacity: 0.95
+
+# BEGIN ACE
+colors:
+  primary:
+    background: '#0f0c0e'
+    foreground: '#b4ccdc'
+  cursor:
+    text:       '#0f0c0e'
+    cursor:     '#b4ccdc'
+  normal:
+    black:      '#0f0c0e'
+    red:        '#3B4752'
+    green:      '#515862'
+    yellow:     '#A35F48'
+    blue:       '#DDA466'
+    magenta:    '#5E7789'
+    cyan:       '#6D8FA5'
+    white:      '#b4ccdc'
+  bright:
+    black:      '#7d8e9a'
+    red:        '#3B4752'
+    green:      '#515862'
+    yellow:     '#A35F48'
+    blue:       '#DDA466'
+    magenta:    '#5E7789'
+    cyan:       '#6D8FA5'
+    white:      '#b4ccdc'
+# END ACE
