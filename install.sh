@@ -98,7 +98,7 @@ mkdir $HOME/Music
 sleep 1 
 
 ### Setting up Wallpaper ###
-cp ./wallpaper/* $HOME/.config/scripts/active_wallpaper
+cp ./wallpaper/* $HOME/.config/scripts/active_wallpaper/
 
 ### INSTALLING OH MY ZSH ###
 printf "Installing OHmyzsh...\n"
