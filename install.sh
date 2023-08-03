@@ -66,12 +66,12 @@ fi
 printf "Installling all the Main packages...\n"
 yay --sudoloop --noconfirm -S $(echo $(cat ./main_packages.txt)) && sleep 1
 
-printf "Do you want other packages...\n Press y for yes or n for No \n"
+printf "Do you want My packages ?...\n Press y for yes or n for No \n"
 read package
 if [[ "$package" == y ]];
 then
 ### INSTALL MY PACKAGES ###
-pritnf "Installling all the other packages...\n"
+printf "Installling all the other packages...\n"
 yay --sudoloop --noconfirm -S $(echo $(cat ./packages.txt)) && sleep 1
 else
 printf "\n"
@@ -93,13 +93,12 @@ printf "Making Default Directories...\n"
 mkdir $HOME/Videos
 mkdir $HOME/Documents
 mkdir $HOME/Downloads
-mkdir $HOME/wallpaper
 mkdir $HOME/Pictures
 mkdir $HOME/Music
 sleep 1 
 
 ### Setting up Wallpaper ###
-cp ./wallpaper/* $HOME/wallpaper/ 
+cp ./wallpaper/* $HOME/.config/scripts/active_wallpaper
 
 ### INSTALLING OH MY ZSH ###
 printf "Installing OHmyzsh...\n"

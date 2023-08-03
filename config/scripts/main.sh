@@ -1,15 +1,6 @@
 #! /bin/sh
 
-wallpaper=$(cat $HOME/.config/scripts/wallpaper.txt | tail -n 1)
-wal -i $HOME/wallpaper/$wallpaper
-feh --bg-scale $HOME/wallpaper/$wallpaper
-$HOME/.config/scripts/./rofi_pywal.sh
-$HOME/.config/scripts/./alacritty_pywal.sh
-$HOME/.config/scripts/./dunst_pywal.sh
-#Dunst
-exec $HOME/.config/dunst/./launch.sh &
-#Polybar
-#$HOME/.config/polybar/./launch.sh &
-#Picom 
-exec $HOME/.config/picom/./launch.sh &
+wallpaper=$(ls $HOME/.config/scripts/active_wallpaper | sed -n 1\p)
+wal -i $HOME/.config/scripts/active_wallpaper/$wallpaper && feh --bg-scale $HOME/.config/scripts/active_wallpaper/$wallpaper && cp $HOME/.cache/wal/colors-rofi-dark.rasi $HOME/.config/rofi && exec $HOME/.config/scripts/./alacritty_pywal.sh && cp $HOME/.cache/wal/dunstrc $HOME/.config/dunst/dunstrc && exec $HOME/.config/dunst/launch.sh && exec $HOME/.config/picom/./launch.sh && exec $HOME/.config/polybar/./launch.sh && notify-send "Theme Chaged & Configs Updated !"
+
 

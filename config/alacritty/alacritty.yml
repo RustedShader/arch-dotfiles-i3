@@ -6,34 +6,7 @@ window:
 font:
     normal:
         family: Fira Code
-    size: 13.0
+    size: 14.0
 
-    opacity: 0.9
+    opacity: 0.95
 
-# BEGIN ACE
-colors:
-  primary:
-    background: '#000000'
-    foreground: '#f3ece4'
-  cursor:
-    text:       '#000000'
-    cursor:     '#f3ece4'
-  normal:
-    black:      '#000000'
-    red:        '#62355E'
-    green:      '#583A64'
-    yellow:     '#673863'
-    blue:       '#7D6F85'
-    magenta:    '#AC9293'
-    cyan:       '#D8BCC5'
-    white:      '#f3ece4'
-  bright:
-    black:      '#aaa59f'
-    red:        '#62355E'
-    green:      '#583A64'
-    yellow:     '#673863'
-    blue:       '#7D6F85'
-    magenta:    '#AC9293'
-    cyan:       '#D8BCC5'
-    white:      '#f3ece4'
-# END ACE
