@@ -95,10 +95,11 @@ mkdir $HOME/Documents
 mkdir $HOME/Downloads
 mkdir $HOME/Pictures
 mkdir $HOME/Music
+mkdir $HOME/.config/scripts/active_wallpaper
 sleep 1 
 
 ### Setting up Wallpaper ###
-cp ./wallpaper/* $HOME/.config/scripts/active_wallpaper/
+cp -r ./wallpaper/* $HOME/.config/scripts/active_wallpaper/
 
 ### INSTALLING OH MY ZSH ###
 printf "Installing OHmyzsh...\n"
