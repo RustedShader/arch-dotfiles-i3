@@ -40,6 +40,7 @@ ttf-font-awesome
 ttf-font-icons
 ttf-ionicons
 ttf-liberation
+ttf-nerd-fonts-symbols
 ttf-opensans
 unzip
 wget
