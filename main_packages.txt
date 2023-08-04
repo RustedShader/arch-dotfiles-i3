@@ -36,6 +36,7 @@ thunar-archive-plugin
 thunar-volman
 ttf-dejavu
 ttf-fira-code
+ttf-firacode-nerd
 ttf-font-awesome
 ttf-font-icons
 ttf-ionicons
