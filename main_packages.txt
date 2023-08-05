@@ -23,6 +23,8 @@ noto-fonts-emoji
 nsxiv
 picom-simpleanims-next-git 
 pipewire
+pipewire-alsa
+pipewire-pulse
 polkit-gnome
 polybar
 python
@@ -46,6 +48,7 @@ ttf-nerd-fonts-symbols
 ttf-opensans
 unzip
 wget
+wireplumber
 xautolock
 xfce4-settings
 xorg
