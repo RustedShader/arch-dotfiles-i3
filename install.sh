@@ -42,7 +42,7 @@ printf "Are You NVIDIA User ? \n Press y for yes or n for No \n"
 read nvidia
 if [[ "$nvidia" == y ]];
 then
-yay -sudoloop --noconfirm -S nvidia nvidia-utils nvidia-settings
+yay --noconfirm -S nvidia nvidia-utils nvidia-settings
 else
 printf "Nothing to Do Here \n"
 fi
@@ -53,7 +53,7 @@ read asus
 
 if [[ "$asus" == y ]];
 then
-yay -sudoloop --noconfirm -S rog-control-center
+yay --noconfirm -S rog-control-center
 ### ENABLE ASUSCTL ###
 printf "Enabling Asusctl"
 sudo systemctl enable --now power-profiles-daemon.service
