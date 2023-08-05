@@ -5,9 +5,6 @@ set $mod Mod4
 font pango:Fira Code 12
 
 
-
-
-
 ## Autostarts ##
 
 # 1. i3 WM 
@@ -23,7 +20,7 @@ exec --no-startup-id xautolock -detectsleep -time 5 -locker i3lock-fancy -detect
 exec --no-startup-id nm-applet
 
 # 5. Startup Scripts
-exec_always $HOME/.config/scripts/main.sh && $HOME/.config/dunst/./launch.sh && $HOME/.config/picom/./launch.sh && $HOME/.config/polybar/./launch.sh && $HOME/.config/scripts/./alacritty_pywal.sh
+exec_always $HOME/.config/scripts/main.sh && $HOME/.config/dunst/./launch.sh && $HOME/.config/picom/./launch.sh && $HOME/.config/polybar/./launch.sh
 
 # Set Volume via Pactl
 set $refresh_i3status killall -SIGUSR1 i3status
